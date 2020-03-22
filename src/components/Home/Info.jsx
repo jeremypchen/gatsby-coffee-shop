@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Title from "../Globals/Title"
 
-export const Info = () => {
+export const Info = ({ showAboutButton = true }) => {
   return (
     <section className="py-5">
       <div className="container">
@@ -24,11 +24,13 @@ export const Info = () => {
               natus in, modi voluptatem vitae ullam repudiandae nulla voluptatum
               accusantium officiis. oluptatem vitae. Vitum vitae Delectus atque
             </p>
-            <Link to="/about">
-              <button className="btn text-lowercase btn-yellow">
-                More About Us
-              </button>
-            </Link>
+            {showAboutButton && (
+              <Link to="/about">
+                <button className="btn text-lowercase btn-yellow">
+                  More About Us
+                </button>
+              </Link>
+            )}
           </div>
         </div>
       </div>
