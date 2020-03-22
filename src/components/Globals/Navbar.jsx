@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-// import { FaCartArrowDown } from "react-icons/fa"
+import { FaCartArrowDown } from "react-icons/fa"
 
 import logo from "../../images/logo.svg"
 
@@ -46,8 +46,9 @@ function Navbar() {
               </Link>
             </li>
           ))}
+
           <li className="nav-item ml-sm-5">
-            {/* <FaCartArrowDown className="cart-icon" /> */}
+            <FaCartArrowDown className="cart-icon snipcart-checkout" />
           </li>
         </ul>
       </div>
