@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import Title from "../Globals/Title"
-// import Img from "gatsby-image"
+import Img from "gatsby-image"
 
 const getCategories = items => {
   const categories = items.map(item => item.node.category)
@@ -57,12 +57,10 @@ const Menu = props => {
                   className="col-11 col-md-6 my-2 d-flex mx-auto"
                 >
                   <div>
-                    <img
-                      alt="menu-img"
-                      className="menu-item-img"
-                      src={node.image.fixed.src}
+                    <Img
+                      fixed={node.image.fixed}
+                      style={{ width: "80px", height: "80px" }}
                     />
-                    {/*<Img fixed={node.image.fixed} />*/}
                   </div>
 
                   {/* item text */}
