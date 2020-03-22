@@ -60,3 +60,12 @@ h6 {
 .footer {
   background: var(--mainBrown);
 }
+
+.menu {
+  background: var(--mainGrey);
+}
+
+.menu-item-img {
+  width: 90px;
+  height: 90px;
+}

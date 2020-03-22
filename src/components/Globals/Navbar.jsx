@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { FaCartArrowDown } from "react-icons/fa"
+// import { FaCartArrowDown } from "react-icons/fa"
 
 import logo from "../../images/logo.svg"
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [css, setCSS] = useState("collapse navbar-collapse")
-  const [links, setLinks] = useState([
+  const [links] = useState([
     { id: 1, path: "/", text: "home" },
     { id: 2, path: "/about", text: "about" },
   ])
@@ -40,14 +40,14 @@ function Navbar() {
       <div className={css}>
         <ul className="navbar-nav mx-auto">
           {links.map(link => (
-            <li className="nav-item" key={link.id}>
-              <Link to={link.path} className="nav-link text-capitalize">
+            <li className="nav-item mx-4" key={link.id}>
+              <Link to={link.path} className="nav-link text-lowercase">
                 {link.text}
               </Link>
             </li>
           ))}
           <li className="nav-item ml-sm-5">
-            <FaCartArrowDown className="cart-icon" />
+            {/* <FaCartArrowDown className="cart-icon" /> */}
           </li>
         </ul>
       </div>
