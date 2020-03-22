@@ -9,7 +9,7 @@ const Product = ({ product }) => {
         <Img fluid={product.image.fluid} className="card-img-top" />
         <div className="card-body text-center text-lowercase">
           <h6>{product.title}</h6>
-          <h6>${product.price.toFixed(2)}</h6>
+          <h6>{product.price.toFixed(2)}</h6>
           <button
             className="btn btn-yellow mt-3 text-lowercase snipcart-add-item"
             data-item-id={product.id}
